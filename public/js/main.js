@@ -30,7 +30,11 @@ function renderMessage(msg) {
 	const div = document.createElement('div');
 	div.classList.add('message');
 	div.innerHTML = `
-    <p>${msg}</p>
+	<div>
+	<p>${msg.username}</p>
+    <p>${msg.text}</p>
+		<p>${msg.time}</p>
+		</div>
   `;
 	document.querySelector('.chat-message').appendChild(div);
 }
