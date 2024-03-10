@@ -5,6 +5,7 @@ socket.on('message', message => {
 });
 
 const chatForm = document.querySelector('.chat-form');
+const chatMessages = document.querySelector('.chat_massages_container');
 
 chatForm.addEventListener('submit', event => {
 	event.preventDefault();
@@ -13,6 +14,14 @@ chatForm.addEventListener('submit', event => {
 
 	// emmit message to the server
 	socket.emit('chatMessage', message);
+
+	//scroll down out
+
+	chatMessages.scrollTop = chatMessages.scrollHeight;
+
+	// clear input
+	event.target.elements.msg.value = '';
+	event.target.elements.msg.focus();
 });
 
 // output message to view

@@ -28,7 +28,9 @@
 		<h1>Salom Chat</h1>
 
 		<div class="w-[600px] mx-auto mt-10 h-[600px] bg-slate-300 p-5 rounded-md">
-      <div class="chat-message"></div>
+			<div class="chat_massages_container overflow-y-scroll w-full h-[400px]">
+				<div class="chat-message w-full bg-blue-300 p-5 rounded-md my-2 mb-4"></div>
+			</div>
 			<form action="" class="chat-form">
 				<input type="text" id="msg" placeholder="Enter message" required autocomplete="off" />
 				<button class="btn">Send</button>
@@ -37,5 +39,15 @@
 
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="./js/main.js"></script>
+
+		<style>
+			.message {
+				background-color: blue;
+				margin: 5px 0;
+				color: white;
+				padding: 5px;
+				border-radius: 5px;
+			}
+		</style>
 	</body>
 </html>
