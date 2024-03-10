@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							clifford: '#da373d',
+						},
+					},
+				},
+			};
+		</script>
+		<style type="text/tailwindcss">
+			@layer utilities {
+				.content-auto {
+					content-visibility: auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Salom Chat</h1>
+
+		<div class="w-[600px] mx-auto mt-10 h-[600px] bg-slate-300 p-5 rounded-md">
+      <div class="chat-message"></div>
+			<form action="" class="chat-form">
+				<input type="text" id="msg" placeholder="Enter message" required autocomplete="off" />
+				<button class="btn">Send</button>
+			</form>
+		</div>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

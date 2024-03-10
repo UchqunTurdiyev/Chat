@@ -1,0 +1,23 @@
+{
+	"name": "chat-app",
+	"version": "1.0.0",
+	"description": "chat app",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js",
+		"dev": "nodemon app.js"
+	},
+	"keywords": [
+		"chat"
+	],
+	"author": "Uchqun Turdieyv",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.3",
+		"moment": "^2.30.1",
+		"socket.io": "^4.7.4"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.0"
+	}
+}
